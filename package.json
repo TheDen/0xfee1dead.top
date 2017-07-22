@@ -1,0 +1,15 @@
+{
+  "name": "0xfee1dead.top",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Khoshaba",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "pm2": "^2.6.1"
+  },
+  "license": "GPL-2.0"
+}
