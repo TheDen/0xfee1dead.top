@@ -1,6 +1,6 @@
 #!/bin/bash
 while true; do 
-echo q | /usr/local/bin/htop | aha --stylesheet --black --line-fix | \
+echo q | htop | aha --stylesheet --black --line-fix | \
   sed 's/<\/style>/body         {overflow-x: hidden;}<\/style>/g' | \
     sed 's/<title>stdin/<title>\/usr\/bin\/htop/g' | \
     sed 's/<\/body>/<script src="\/reload.js"><\/script><\/body>/g' | \
