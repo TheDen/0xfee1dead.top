@@ -4,5 +4,5 @@ install:
 	npm install
 
 run:
-	nohup ./htopgen.sh >/dev/null 2>&1 & 
-	pm2 start server.js -i 0
+	./htopgen.sh &	
+	pm2 show server && pm2 update server.js -i 0 || pm2 start server.js -i 0 
