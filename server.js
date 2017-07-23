@@ -9,6 +9,8 @@ var watch = require('watch')
 var app = express()
 
 var publicDir = path.join(__dirname, 'public')
+app.use(express.static('public'))
+
 
 app.set('port', process.env.PORT || 8080)
 app.use(logger('dev'))
@@ -17,11 +19,6 @@ app.use(bodyParser.json()) // Parses json, multi-part (file), url-encoded
 app.get('/', function (req, res) {
   res.sendFile(path.join(publicDir, 'htop.html'))
 })
-
-
-app.get('/reload.js', function(req, res){
-  res.sendFile(__dirname + '/public/reload.js');
-});
 
 var server = http.createServer(app)
 
