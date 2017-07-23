@@ -1,6 +1,6 @@
 # build app
 install:
-	npm install -g pm2
+	sudo npm install -g pm2
 	npm install
 
 run:
