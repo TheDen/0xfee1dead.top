@@ -5,24 +5,28 @@ var reload = require('reload')
 var bodyParser = require('body-parser')
 var logger = require('morgan')
 var watch = require('watch')
- 
+
 var app = express()
- 
+
 var publicDir = path.join(__dirname, 'public')
- 
-app.set('port', process.env.PORT || 3000)
+
+app.set('port', process.env.PORT || 8080)
 app.use(logger('dev'))
-app.use(bodyParser.json()) // Parses json, multi-part (file), url-encoded 
- 
+app.use(bodyParser.json()) // Parses json, multi-part (file), url-encoded
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(publicDir, 'htop.html'))
 })
- 
+
+
+app.get('/reload.js', function(req, res){
+  res.sendFile(__dirname + '/public/reload.js');
+});
+
 var server = http.createServer(app)
- 
+
 reloadServer = reload(app);
 watch.watchTree(__dirname + "/public", function (f, curr, prev) {
-    // Fire server-side reload event
     reloadServer.reload();
 });
 
