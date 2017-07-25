@@ -8,11 +8,12 @@
   },
   "author": "Denis Khoshaba",
   "dependencies": {
-    "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "morgan": "^1.8.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "path": "^0.12.7",
     "pm2": "^2.6.1",
-    "reload": "^2.0.1",
+    "socket.io": "^2.0.3",
     "watch": "^1.0.2"
   },
   "license": "GPL-2.0"

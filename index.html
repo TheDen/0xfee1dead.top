@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>/usr/bin/htop</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+    <link rel='stylesheet' href='ribbon.css' meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+      var socket = io();
+			socket.on('fileUpdate', (msg) => {
+				document.getElementById("feed").innerHTML = msg;
+			});
+		</script>
+  </head>
+  <body>
+    <a class='github-fork-ribbon' href='https://github.com/theden/0xfee1dead.top' target='_blank' title='Fork me on GitHub'>Fork me on GitHub</a>
+    <div id="feed">
+			<div style="text-align:center; font-family: monospace; font-size: 2vh;">live htop<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div> 
+				<div>
+					<a style="position: fixed; bottom: 0; right: 0; left: 0; width: 100%;font-family: monospace; font-size: 2vh; color: white; text-decoration: none;" href="http://theden.sh" target="_blank">✌ theden.sh</a>
+				</div>
+				<a style="position: fixed; bottom: 0; right: 0; left: 0; width: 100%;font-family: monospace; font-size: 2vh; color: white; text-decoration: none;" href="http://theden.sh" target="_blank">✌ theden.sh</a>
+	</body>
+</html>
