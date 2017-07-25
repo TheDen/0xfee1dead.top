@@ -1,5 +1,5 @@
 #!/bin/bash
-while true; do echo q | htop | aha --stylesheet --black --line-fix > ./public/htop.html.aux && mv -f ./public/htop.html.aux ./public/htop.html ; sleep 2; done
+while true; do echo q | htop | aha --stylesheet --black --line-fix | sed 's/<\/style>/body {overflow-x: hidden;} html {font-size: 2vh;}<\/style>/g' > ./public/htop.html.aux && mv -f ./public/htop.html.aux ./public/htop.html ; sleep 2; done
 #while true; do
 #}echo q | htop | aha --stylesheet --black --line-fix \
 #    sed 's/<\/style>/body         {overflow-x: hidden;} html {font-size: 2vh;}<\/style>/g' | \
