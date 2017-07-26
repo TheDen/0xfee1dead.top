@@ -14,19 +14,17 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-sockets = [];
+var sockets = [];
 io.on('connection', function(socket){
-//  console.log('a user connected');
   sockets.push(socket);
 
-  io.on('disconnection', () => {
-    index = sockets.indexOf(socket);
+  socket.on('disconnection', () => {
+    let index = sockets.indexOf(socket);
     socket.splice(index, 1);
-//    console.log('disconnected');
   })
 });
 
-port = 8080 
+var port = 8080
 http.listen(port, function(){
   console.log('listening on ' + port);
 });
