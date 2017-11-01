@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>/usr/bin/htop</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
-		<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+  <head>
+    <title>/usr/bin/htop</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
     <link rel='stylesheet' href='ribbon.css' meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
-		<script src="/socket.io/socket.io.js"></script>
-		<script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
       var socket = io();
 			socket.on('fileUpdate', (msg) => {
 				document.getElementById("feed").innerHTML = msg;
-			});
-		</script>
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76175181-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-76175181-5');
+    </script>
   </head>
   <body>
     <a class='github-fork-ribbon' href='https://github.com/theden/0xfee1dead.top' target='_blank' title='Fork me on GitHub'>Fork me on GitHub</a>
