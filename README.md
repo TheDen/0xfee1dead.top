@@ -1,10 +1,10 @@
-# [0xfee1dead.top](http://0xfee1dead.top/)
+# [0xfee1dead.top](https://0xfee1dead.top/)
 
 Live `htop` output of a server
 
 ## Build
 
-### Prerequisites 
+### Prerequisites
 
 * htop
 * Node
@@ -13,7 +13,7 @@ Live `htop` output of a server
 
 Running `make install` installs the npm modules and the `pm2` cli tool
 
-## Run 
+## Run
 
 ```make run``` will run the node `pm2` and `htopgen.sh` to generate the `htop.html` files
 
