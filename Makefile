@@ -1,8 +1,16 @@
 # build app
+
+.PHONY: install
 install:
 	sudo npm install -g pm2
 	npm install
 
-run:
-	./htopgen.sh &	
-	pm2 show server && pm2 update server.js -i 0 || pm2 start server.js -i 0 
+.PHONY: stop
+stop:
+	pm2 delete live-htop || true
+	kill $$(pgrep -f htopgen.sh) || true
+
+.PHONY: start
+start:
+	./htopgen.sh &
+	pm2 start process.yml

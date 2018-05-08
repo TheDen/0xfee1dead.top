@@ -1,0 +1,7 @@
+apps:
+  - script: "server.js"
+    name: "live-htop"
+    instances: 0  # "0" means as much instances as you have CPU cores
+    exec_mode: cluster
+    watch: false # if true, it will restart your app everytime a file change is detected on the folder or subfolder of your app.
+    combine_logs: true
