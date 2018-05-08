@@ -14,3 +14,11 @@ stop:
 start:
 	./htopgen.sh &
 	pm2 start process.yml
+
+.PHONY: renew-cert-dry-run
+renew-cert-dry-run:
+	sudo certbot renew --dry-run
+
+.PHONY: renew-cert
+renew-cert:
+	sudo certbot renew
