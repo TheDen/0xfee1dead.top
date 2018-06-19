@@ -1,4 +1,4 @@
-# [0xfee1dead.top](https://0xfee1dead.top/)
+# 0xfee1dead.top
 
 Live `htop` output of a server
 
@@ -16,6 +16,10 @@ Running `make install` installs the npm modules and the `pm2` cli tool
 ## Run
 
 ```make run``` will run the node `pm2` and `htopgen.sh` to generate the `htop.html` files
+
+## Screenshot
+
+![In-browser screenshot](0xfee1dead.top.png)
 
 ## Thanks
 
